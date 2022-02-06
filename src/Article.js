@@ -10,7 +10,6 @@ const Article = () => {
     setIndex,
     nextQuestion,
     setisModalOpen,
-    isModalOpen,
   } = useGlobalContext();
 
   const { question, correct_answer, incorrect_answers } = quiz[index];
@@ -37,15 +36,16 @@ const Article = () => {
   };
 
   return (
-    <article className="article-container">
-      <h5 className="text-right">
-        Correct answers {correct}/{index}
-      </h5>
-      <h4
-        className="question"
-        dangerouslySetInnerHTML={{ __html: question }}
-      ></h4>
-      {!isModalOpen ? (
+    <section className="quiz-container">
+      <article className="article-container">
+        <h5 className="text-right">
+          Correct answers {correct}/{index}
+        </h5>
+        <h4
+          className="question"
+          dangerouslySetInnerHTML={{ __html: question }}
+        ></h4>
+
         <div className="answer-container">
           {answers.map((item, index) => {
             return (
@@ -59,12 +59,12 @@ const Article = () => {
             );
           })}
         </div>
-      ) : null}
 
-      <button className="next-btn" onClick={() => nextQuestion(index)}>
-        Skip Question
-      </button>
-    </article>
+        <button className="next-btn" onClick={() => nextQuestion(index)}>
+          Skip Question
+        </button>
+      </article>
+    </section>
   );
 };
 

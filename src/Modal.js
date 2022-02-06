@@ -4,7 +4,7 @@ import { useGlobalContext } from "./AppProvider";
 const Modal = () => {
   const { isModalOpen, quiz, correct, playAgain } = useGlobalContext();
   return (
-    <section>
+    <section className={isModalOpen ? "modal show" : "modal"}>
       <article
         className={isModalOpen ? "modal-container show" : "modal-container"}
       >
