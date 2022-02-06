@@ -53,9 +53,8 @@ const Article = () => {
                 key={index}
                 className="answer-btn"
                 onClick={() => handleCheck(item)}
-              >
-                {item}
-              </button>
+                dangerouslySetInnerHTML={{ __html: item }}
+              ></button>
             );
           })}
         </div>
