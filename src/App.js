@@ -24,10 +24,8 @@ function App() {
   return (
     <main>
       <Navbar />
-      <section className="section-container">
-        <Modal />
-        <Article />
-      </section>
+      <Modal />
+      <Article />
     </main>
   );
 }
