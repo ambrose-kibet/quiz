@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400|Poppins:400");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+} /*16px*/
+
+html {
+  font-size: 100%;
+} /*16px*/
+:root {
+  --clr-bcg: #e5e5e5;
+  --clr-icons: #000;
+  --clr-font: #000000;
+  --clr-primary: #fca311;
+  --fixed-width: 350px;
+}
+.light-theme {
+  --clr-bcg: #e5e5e5;
+  --clr-icons: #000;
+  --clr-font: #000000;
+  --clr-components: white;
+  --clr-primary: #fca311;
+}
+.dark-theme {
+  --clr-bcg: #000000;
+  --clr-icons: white;
+  --clr-font: white;
+  --clr-components: #e5e5e5;
+  --clr-primary: #fca311;
+}
+body {
+  background: var(--clr-bcg);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--clr-font);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small,
+.text_small {
+  font-size: 0.8rem;
+}
+/* NAvbar */
+.Nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-title {
+  display: inline-block;
+  margin: 0.2rem 0.3rem;
+}
+.icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  color: var(--clr-font);
+}
+.btn-toggler {
+  background-color: transparent;
+  border: none;
+  margin: 0.2rem 0.3rem;
+  cursor: pointer;
+}
+/* Quiz setup */
+.section-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: 0.2rem auto;
+}
+.form-container,
+.modal-container {
+  max-width: var(--fixed-width);
+  background-color: var(--clr-components);
+  border-radius: 0.25rem;
+  position: relative;
+  top: 10%;
+  height: fit-content;
+}
+.form {
+  max-width: 98%;
+  margin: 0.2rem 0.5rem;
+}
+.form-title {
+  margin: 0.8rem 0.5rem;
+  color: #000000;
+}
+.label {
+  color: #000000;
+  font-weight: bold;
+}
+.quantity,
+.category,
+.option {
+  width: 100%;
+  padding: 0.3rem;
+  outline: 0.2rem solid rgb(21, 148, 245);
+  border: none;
+}
+.category {
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+.submit-btn {
+  width: 100%;
+  background-color: var(--clr-primary);
+  color: #000000;
+  text-align: center;
+  font-weight: bolder;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: none;
+}
+/* modal */
+.modal-container {
+  width: 330px;
+  background-color: gray;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  justify-content: center;
+  visibility: hidden;
+}
+/* .modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+  z-index: -1;
+} */
+.show {
+  z-index: 2;
+  visibility: visible;
+  opacity: 1;
+}
+.text-center {
+  text-align: center;
+}
+.congrats,
+h2 {
+  color: #000000;
+  padding: 0.2rem 1.5rem;
+  text-transform: capitalize;
+}
+.play-btn {
+  background-color: var(--clr-primary);
+  color: #000000;
+
+  padding: 0.4rem 0.8rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.25rem;
+  border: none;
+}
+.answer-container {
+  width: 90%;
+}
+.article-container {
+  z-index: 1;
+  width: var(--fixed-width);
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  justify-content: center;
+  background-color: var(--clr-components);
+  border-radius: 0.25rem;
+}
+.answer-btn {
+  width: 100%;
+  background-color: rgb(10, 144, 192);
+  color: #000000;
+  text-align: center;
+  font-weight: bolder;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: none;
+}
+.text-right {
+  margin-left: auto;
+  width: 100%;
+
+  color: #04aa25;
+  margin-right: 0.5rem;
+  text-align: right;
+}
+.question {
+  color: #000000;
+  margin: 0.6rem auto;
+  width: 90%;
+}
+.next-btn {
+  padding: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  margin-right: 0.5rem;
+  margin-left: auto;
+  font-weight: bold;
+  background-color: #fca311;
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+}
+.test-danger {
+  color: red;
+  font-weight: bold;
+}
+.loading {
+  color: var(--clr-font);
+}
